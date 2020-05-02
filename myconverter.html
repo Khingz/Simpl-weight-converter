@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        body {
+            margin-top: 50px;
+            background: #333;
+            color: white;
+            margin-bottom: 5%;
+        }
+
+        .dropdown {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .trans {
+            transition: 2s ease;
+        }
+
+
+        .resetBtn {
+            width: 40%;
+            margin-left: 10%;
+            color: white;
+            font-weight: bolder;
+            border-radius: 5px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .resetBtn:hover {
+            color: white;
+            opacity: 0.5;
+        }
+
+        .dropdown-item:hover {
+            background: rgb(68, 68, 209);
+        }
+
+        
+        
+    </style>
+    <title>Document</title>
+</head>
+<body id="body">
+    <div class="container">
+        <div class="row offset-md-3">
+            <div class="col-md-6">
+                <h3 class="display-4 text-center">Weight Converter</h3>
+                <div class="dropdown mb-4">
+                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" id="selectBtn">SELECT UNIT TO CONVERT</button>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <a href="#" id="idKg" class="dropdown-item"><h5 class="display-5">Kg to other units</h5></a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" id="idgram"class="dropdown-item"><h5 class="display-5">g to other unit</h5></a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#"id="idlbs" class="dropdown-item"><h5 class="display-5">lbs to other unit</h5></a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" id="idOunce"class="dropdown-item"><h5 class="display-5">Ounce to other unit</h5></a>
+                        <button class="dropdown-item bg-danger text-center mt-3 resetBtn" id="resetBtn">RESET</button>
+                    </div>
+                </div>
+
+                <div id="kg">
+                    <h4 class="display-4 text-center" style="color:blueviolet">Kg to other Units...</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="number" class="form-control form-control-lg" placeholder="Enter Kg..." id="kgInput">
+                        </div>
+                    </form>
+                    <div id="outputKg">
+                        <div class="card bg-primary mb-2">
+                            <div class="card-header">
+                                <h4>Lbs:</h4>
+                                <div id="lbsOuput"></div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-success mb-2">
+                            <div class="card-header">
+                                <h4>Grams:</h4>
+                                <div id="gramOuput"></div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-danger">
+                            <div class="card-header">
+                                <h4>Ounce:</h4>
+                                <div id="ozOuput"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-center display-6">Khingz &COPY; 2019 Updated Brad version</p>
+                </div>
+
+                <div id="grams">
+                        <h4 class="display-4 text-center" style="color:rgb(15, 215, 230)">Grams to other Units...</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="number" class="form-control form-control-lg" placeholder="Enter Grams..." id="gramInput">
+                        </div>
+                    </form>
+                    <div id="outputGram">
+                        <div class="card bg-info mb-2">
+                            <div class="card-header">
+                                <h4>Lbs:</h4>
+                                <div id="lbsOuput1"></div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-warning mb-2">
+                            <div class="card-header">
+                                <h4>Kilograms:</h4>
+                                <div id="kgOuput1"></div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-danger">
+                            <div class="card-header">
+                                <h4>Ounce:</h4>
+                                <div id="ozOuput1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center display-6">Khingz &COPY; 2019 Updated Brad version</p>
+                </div>
+
+                <div id="Ounce">
+                        <h4 class="display-4 text-center" style="color:rgb(32, 9, 138)">Ounce to other Units...</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="number" class="form-control form-control-lg" placeholder="Enter Ounce..." id="OunceInput">
+                        </div>
+                    </form>
+                    <div id="outputOunce">
+                        <div class="card bg-danger mb-2">
+                            <div class="card-header">
+                                <h4>Grams:</h4>
+                                <div id="gramsOuput3"></div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-success mb-2">
+                            <div class="card-header">
+                                <h4>Kilograms:</h4>
+                                <div id="kgOuput3"></div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-warning">
+                            <div class="card-header">
+                                <h4>Lbs:</h4>
+                                <div id="lbsOuput3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center display-6">Khingz &COPY; 2019 Updated Brad version</p>
+                </div>
+
+                <div id="lbs">
+                        <h4 class="display-4 text-center" style="color:rgb(76, 92, 6)">Lbs to other Units...</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="number" class="form-control form-control-lg" placeholder="Enter Lbs..." id="lbsInput">
+                        </div>
+                    </form>
+                    <div id="outputIbs">
+                        <div class="card bg-info mb-2">
+                            <div class="card-header">
+                                <h4>Grams:</h4>
+                                <div id="gramsOuput4"></div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-success mb-2">
+                            <div class="card-header">
+                                <h4>Kilograms:</h4>
+                                <div id="kgOuput4"></div>
+                            </div>
+                        </div>
+
+                        <div class="card bg-primary">
+                            <div class="card-header">
+                                <h4>Ounce:</h4>
+                                <div id="ozOuput4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center display-6">Khingz &COPY; 2019 Updated Brad version</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="./js/popper.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.min.js"></script>  
+    <script src="./js/converter.js"></script>
+</body>
+</html>
